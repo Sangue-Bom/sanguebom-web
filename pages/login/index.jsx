@@ -1,22 +1,21 @@
-import InputField from "../../components/InputField/index"
-import Button from "../../components/Button/index"
 import Image from "next/image"
+import Link from	"next/link"
 
 export default function LoginPage() {
 return(
 	<>
-<div className="h-screen place-items-center grid bg-[#F0F0F5]">
-	<div className="w-full w-[20%] h-[40%] flex flex-col justify-between items-center">
-		<Image src="/logo-name-vertical.svg" height={150} width={240} />
+<div className="h-screen flex flex-col items-center bg-gray-base">
+	<div className="w-full flex flex-col justify-between items-center mt-[25vh]">
+		<Image src="/logo-name-vertical.svg" height={150} width={240} priority={true}/>
 		<div className="flex flex-col items-center gap-4">
 		<h2 className="font-bold text-primary">Entrar</h2>
-		<InputField placeholder='Nome de usuário'/>
-		<InputField placeholder='Senha' className='w-full'/>
-		<Button>Entrar</Button>
+			<input placeholder="Nome de usuário" className="w-full h-10 "/>
+			<input placeholder="Senha" className="w-full h-10 "/>
+			<button className="btn-primary w-full h-10">Entrar</button>
 		</div>
 	</div>
 </div>
-	<footer className="absolute top-[95%] left-[50%] ml-[-150px]">Ainda não possui uma conta? <a className="underline text-primary" href="google.com">Cadastrar</a></footer>
+		<footer className="absolute top-[95%] left-[50%] ml-[-150px]">Ainda não possui uma conta? <Link href="/sign-up"><a className="underline text-primary">Cadastrar</a></Link></footer>
 	</>
 )
 }
