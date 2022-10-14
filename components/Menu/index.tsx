@@ -16,7 +16,7 @@ export default function Menu() {
     <>
       {isOpen ? (
         /*Open menu*/
-        <div className="h-screen w-[17vw] bg-[#fff] gap-4 flex flex-col p-6 shadow-2xl duration-300  z-10">
+        <div className="h-screen w-[17vw] bg-[#fff] gap-4 flex flex-col p-6 shadow-2xl duration-300  z-50 absolute top-0 left-0">
           {/*Close button*/}
           <div className="w-full flex justify-end mt-3 mb-20 cursor-pointer">
             <Image
