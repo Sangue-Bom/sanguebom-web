@@ -1,5 +1,6 @@
 import validator from "validator";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 // Interface for validation return
 interface validationReturnInterface {
@@ -8,7 +9,6 @@ interface validationReturnInterface {
 }
 
 export default class SignUpManager {
-
   // Method which validates the username
   public validateUsername(username: string): validationReturnInterface {
     if (!validator.isAlpha(username))
@@ -125,8 +125,7 @@ export default class SignUpManager {
   }
 
   // Method which handles the api sign-up request
-  public handleSignUp(user: any, profilePic: string):boolean {
-    let result = null;
+  public handleSignUp(user: any, profilePic: string) {
     axios
       .post(`${process.env.NEXT_PUBLIC_API_URL}/create-hospital`, {
         hosp_name: user.name,
@@ -136,18 +135,14 @@ export default class SignUpManager {
         hosp_cep: parseInt(user.cep),
         hosp_cidade: user.city,
         hosp_num_predial: parseInt(user.addressNumber),
+        hosp_bairro: user.neighborhood,
         hosp_unidade_federal: user.state,
         hosp_pic: profilePic,
       })
       .then((res) => {
         if (res.status == 200) {
-          result = res;
+          useRouter().push("/login");
         }
-      })
-
-      if (result != null) {
-        return true;
-      }
-      return false;
+      });
   }
 }

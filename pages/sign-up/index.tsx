@@ -4,7 +4,6 @@ import { useContext, useState } from "react";
 import SignUpManager from "./SingUpManager";
 import { SignUpContext } from "./SingUpContext";
 import InputField from "../../components/InputField/index";
-import { useRouter } from "next/router";
 
 export default function SingUp() {
   // State tha represents the profile pic value
@@ -12,9 +11,6 @@ export default function SingUp() {
 
   // Instace of the validation and sing-up class
   const validation = new SignUpManager();
-
-  // Instance of router object for navigation
-  const router = useRouter();
 
   // Extracting values from the SignUpContext which
   // manages the states and its 'sets'
@@ -181,7 +177,6 @@ export default function SingUp() {
             className="w-full h-10 btn-primary mt-14 disabled:bg-gray-dark"
             onClick={() => {
               validation.handleSignUp(user, profilePic);
-              router.push("/login");
             }}
           >
             Cadastrar
