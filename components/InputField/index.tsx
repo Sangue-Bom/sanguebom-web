@@ -44,7 +44,7 @@ export default function InputField({
         } ${error.status === true && "border-[#FF0000]"}`}
         onChange={(event) => {
           let value = event.target.value;
-          validation(value, setError)}
+          validation != null && validation(value, setError)}
         }
         type={type}
       />
