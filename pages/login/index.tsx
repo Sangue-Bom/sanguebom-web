@@ -20,6 +20,7 @@ export default function LoginPage() {
 	}
 
 	async function handleSignIn() {
+		axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/login`, {user_email: user.login, user_password: user.password}).then((res) => console.log(res));
 	}
 
 return(
