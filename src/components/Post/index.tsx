@@ -10,7 +10,7 @@ interface PostProps {
 
 export default function Post({pic="", title, text}:PostProps) {
 	return (
-		<div className="bg-[#FFFFFF] rounded-xl shadow-xl w-80 h-28 flex gap-5 px-6 py-3">
+		<div className="bg-[#FFFFFF] rounded-xl shadow-xl h-28 flex gap-5 px-6 py-3">
 			<img src={pic} className="rounded-full w-14 h-14" alt=""/>
 			<div className="flex flex-col justify-between w-full">
 				<h3 className="text-sm font-medium text-primary">{title}</h3>

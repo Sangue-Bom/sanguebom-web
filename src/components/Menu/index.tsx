@@ -20,7 +20,7 @@ export default function Menu() {
     <>
       {isOpen ? (
         /*Open menu*/
-        <div className="h-full w-[17vw] bg-[#fff] gap-4 flex flex-col p-6 shadow-2xl duration-300  z-50 absolute top-0 left-0">
+        <aside className="h-screen w-[17vw] bg-[#fff] gap-4 flex flex-col p-6 shadow-2xl duration-300 fixed sm:hidden">
           {/*Close button*/}
           <div className="w-full flex justify-end mt-3 mb-20 cursor-pointer">
             <img
@@ -66,12 +66,12 @@ export default function Menu() {
               </div>
             </Link>
           </div>
-        </div>
+        </aside>
 
       ) : (
 
         /*Closed menu*/
-        <div className="h-screen w-16 bg-[#fff] gap-4 flex flex-col p-2 shadow-2xl items-center transition-all duration-300 z-10 ease-in-out">
+        <aside className="h-screen w-16 bg-[#fff] fixed gap-4 flex flex-col p-2 shadow-2xl items-center transition-all duration-300 ease-in-out">
           {/*Open button*/}
           <div className="my-11 self-center cursor-pointer">
                 <img src={Hamburguer} className="w-6 h-6" alt="" onClick={toggleMenu} />
@@ -94,7 +94,7 @@ export default function Menu() {
               <img src={Ranking} className="w-6 h-6" alt=""/>
             </Link>
           </div>
-        </div>
+        </aside>
       )}
     </>
   );

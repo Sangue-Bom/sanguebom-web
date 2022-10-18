@@ -6,6 +6,9 @@
   input {
     @apply p-3 border-2 rounded appearance-none bg-[#F0F0F5] focus:outline-none border-primary;
   }
+  input[type="textarea"] {
+    @apply w-full rounded-lg text-xs bg-gray-base p-4 outline-none border-none;
+  }
 
   .btn-primary {
     @apply font-bold text-[#FFFFFF] rounded drop-shadow-xl bg-primary;

@@ -20,7 +20,7 @@ export default function Avatar() {
       {/*Base avatar icon*/}
       {user.hosp_pic ? (
         <div
-          className="h-16 w-16 rounded-full absolute top-7 right-20 z-50 shadow-2xl cursor-pointer"
+          className="h-16 w-16 rounded-full absolute top-7 right-8 lg:right-20 z-50 shadow-2xl cursor-pointer"
           onClick={toggleTab}
         >
         <img

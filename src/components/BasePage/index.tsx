@@ -1,17 +1,17 @@
 import Avatar from "../Avatar";
 import Menu from "../Menu";
-import React, {ReactNode} from "react"
+import {ReactNode} from "react"
 
 interface BasePageProps {
 	children:ReactNode;
 }
 export default function BasePage({children}:BasePageProps) {
 	return(
-		<>
+		<div className="min-h-screen flex overflow-hidden">
 			<Menu/>
 			<Avatar/>
-      <div className="w-screen min-h-screen bg-gray-base absolute top-0 -z-10 flex flex-col pr-20 pl-32">
+			<div className="w-full min-h-screen bg-gray-base a flex flex-col pr-8 pl-24 lg:pr-20 lg:pl-32 pb-8">
 				{children}
 			</div>
-		</>
+		</div>
 	);}
