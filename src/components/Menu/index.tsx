@@ -20,7 +20,7 @@ export default function Menu() {
     <>
       {isOpen ? (
         /*Open menu*/
-        <aside className="h-screen w-[17vw] bg-[#fff] gap-4 flex flex-col p-6 shadow-2xl duration-300 fixed sm:hidden">
+        <aside className="h-screen w-[17vw] bg-[#fff] gap-4 flex flex-col p-6 shadow-2xl duration-300 fixed">
           {/*Close button*/}
           <div className="w-full flex justify-end mt-3 mb-20 cursor-pointer">
             <img
