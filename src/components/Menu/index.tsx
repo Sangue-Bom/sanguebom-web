@@ -20,7 +20,7 @@ export default function Menu() {
     <>
       {isOpen ? (
         /*Open menu*/
-        <aside className="h-screen w-[17vw] bg-[#fff] gap-4 flex flex-col p-6 shadow-2xl duration-300 fixed">
+        <aside className="h-screen w-44 lg:w-52 bg-[#fff] gap-4 flex flex-col p-6 shadow-2xl duration-300 fixed">
           {/*Close button*/}
           <div className="w-full flex justify-end mt-3 mb-20 cursor-pointer">
             <img
@@ -32,37 +32,37 @@ export default function Menu() {
           </div>
 
           {/*Informatives button that navigates to /informatives route*/}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col">
             <Link to="/informatives">
-              <div className="flex justify-between cursor-pointer">
-                <h3 className="font-bold text-primary text-lg origin-left duration-300">
+              <div className="flex items-center justify-between cursor-pointer">
+                <h3 className="font-bold text-primary text-sm lg:text-lg origin-left duration-300">
                   Informativos
                 </h3>
-                <img src={Chat} className="w-8 h-8" alt=""/>
+                <img src={Chat} className="w-6 h-6 lg:w-8 lg:h-8" alt=""/>
               </div>
             </Link>
 
-            <hr className="w-full h-[1px] bg-[#FFABAB] border-none" />
+            <span className="w-full h-[1px] bg-[#FFABAB] border-none my-4 lg:h-[2px]" />
 
             {/*Certificates button that navigates to /certificates route*/}
             <Link to="/certificates">
               <div className="flex justify-between cursor-pointer">
-                <h3 className="font-bold text-primary text-lg origin-left duration-300">
+                <h3 className="font-bold text-primary text-sm lg:text-lg origin-left duration-300">
                   Certificados
                 </h3>
-                <img src={Award} className="w-8 h-8" alt=""/>
+                <img src={Award} className="w-6 h-6 lg:w-8 lg:h-8" alt=""/>
               </div>
             </Link>
 
-            <hr className="w-full h-[1px] bg-[#FFABAB] border-none" />
+            <span className="w-full h-[1px] bg-[#FFABAB] border-none my-4 lg:h-[2px]" />
 
             {/*Ranking button that navigates to /ranking route*/}
             <Link to="/ranking">
               <div className="flex justify-between cursor-pointer">
-                <h3 className="font-bold text-primary text-lg origin-left duration-300">
+                <h3 className="font-bold text-primary text-sm lg:text-lg origin-left duration-300">
                   Ranking
                 </h3>
-                <img src={Ranking}className="w-8 h-8" alt=""/>
+                <img src={Ranking}className="w-6 h-6 lg:w-8 lg:h-8" alt=""/>
               </div>
             </Link>
           </div>
