@@ -20,12 +20,12 @@ export default function Menu() {
     <>
       {isOpen ? (
         /*Open menu*/
-        <div className="h-screen w-[17vw] bg-[#fff] gap-4 flex flex-col p-6 shadow-2xl duration-300  z-50 absolute top-0 left-0">
+        <div className="h-full w-[17vw] bg-[#fff] gap-4 flex flex-col p-6 shadow-2xl duration-300  z-50 absolute top-0 left-0">
           {/*Close button*/}
           <div className="w-full flex justify-end mt-3 mb-20 cursor-pointer">
             <img
               src={Close}
-              className="w-12 h-12"
+              className="w-3 h-3"
               onClick={toggleMenu}
               alt=""
             />
@@ -38,7 +38,7 @@ export default function Menu() {
                 <h3 className="font-bold text-primary text-lg origin-left duration-300">
                   Informativos
                 </h3>
-                <img src={Chat} className="w-24 h-24" alt=""/>
+                <img src={Chat} className="w-8 h-8" alt=""/>
               </div>
             </Link>
 
@@ -50,7 +50,7 @@ export default function Menu() {
                 <h3 className="font-bold text-primary text-lg origin-left duration-300">
                   Certificados
                 </h3>
-                <img src={Award} className="w-6 h-6" alt=""/>
+                <img src={Award} className="w-8 h-8" alt=""/>
               </div>
             </Link>
 
@@ -62,7 +62,7 @@ export default function Menu() {
                 <h3 className="font-bold text-primary text-lg origin-left duration-300">
                   Ranking
                 </h3>
-                <img src={Ranking}className="w-6 h-6" alt=""/>
+                <img src={Ranking}className="w-8 h-8" alt=""/>
               </div>
             </Link>
           </div>
@@ -71,7 +71,7 @@ export default function Menu() {
       ) : (
 
         /*Closed menu*/
-        <div className="h-screen w-[5vw] bg-[#fff] gap-4 flex flex-col p-2 shadow-2xl transition-all duration-300 z-10 ease-in-out">
+        <div className="h-screen w-16 bg-[#fff] gap-4 flex flex-col p-2 shadow-2xl items-center transition-all duration-300 z-10 ease-in-out">
           {/*Open button*/}
           <div className="my-11 self-center cursor-pointer">
                 <img src={Hamburguer} className="w-6 h-6" alt="" onClick={toggleMenu} />

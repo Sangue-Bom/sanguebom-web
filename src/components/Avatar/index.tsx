@@ -45,7 +45,7 @@ export default function Avatar() {
             <h3 className="w-full text-center">Editar perfil</h3>
           </Link>
           <hr className="w-full h-[1px] border-none bg-primary" />
-          <Link to="/login">
+          <Link to="/">
             <h3 className="w-full text-center">Sair</h3>
           </Link>
         </div>

@@ -10,7 +10,7 @@ export default function BasePage({children}:BasePageProps) {
 		<>
 			<Menu/>
 			<Avatar/>
-      <div className="w-screen h-screen bg-gray-base absolute top-0 -z-10 flex flex-col pr-20 pl-32">
+      <div className="w-screen min-h-screen bg-gray-base absolute top-0 -z-10 flex flex-col pr-20 pl-32">
 				{children}
 			</div>
 		</>

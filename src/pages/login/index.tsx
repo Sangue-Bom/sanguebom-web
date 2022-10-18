@@ -17,7 +17,7 @@ return(
 			<InputField placeholder="Nome de usuário" className="w-full h-10" validation={handleUsername}/>
 
 			<InputField placeholder="Senha" className="w-full h-10" type="password" validation={handlePassword}/>
-			<button className="btn-primary w-full h-10" onClick={handleLogin}>Entrar</button>
+			<button className="btn-primary w-full h-10" onClick={(event) => handleLogin(event)}>Entrar</button>
 		</div>
 	</div>
 </div>
